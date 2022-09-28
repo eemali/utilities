@@ -1,0 +1,8 @@
+prefix=D:/Utils/xt/install/xtensor-io
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: xtensor
+Description: xtensor-io is a C++ library that enables opening and saving of common file and image formats to and from xtensor arrays.
+Version: 0.12.6
+Cflags: -I${includedir}

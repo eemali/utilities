@@ -1,0 +1,8 @@
+prefix=D:/Utils/xtensor_cmake/install/xsimd
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: xsimd
+Description: xsimd provides a unified means for using SIMD features for library authors..
+Version: 7.5.0
+Cflags: -I${includedir}

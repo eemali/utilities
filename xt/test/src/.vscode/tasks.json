@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Debug",
+      "command": "cl.exe",
+      "args": [
+        "/Zi",
+        "/MDd",
+        "/EHsc",
+        "/nologo",
+        "/Fe:",
+        "${workspaceFolder}/Debug\\${fileBasenameNoExtension}.exe",
+        "/Fo:",
+        "${workspaceFolder}/Debug\\${fileBasenameNoExtension}.obj",
+        "${file}",
+        "/I${workspaceFolder}/../../install/nlohmann_json/include",
+        "/I${workspaceFolder}/../../install/xsimd/include",
+        "/I${workspaceFolder}/../../install/xtensor/include",
+        "/I${workspaceFolder}/../../install/xtensor-io/include",        
+        "/I${workspaceFolder}/../../install/xtl/include"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$msCompile"],
+      "group": "build",
+      "detail": "compiler: cl.exe"
+    },
+    {
+      "type": "shell",
+      "label": "Release",
+      "command": "cl.exe",
+      "args": [
+        "/Zi",
+        "/EHsc",
+        "/nologo",
+        "/Fe:",
+        "${workspaceFolder}/Release\\${fileBasenameNoExtension}.exe",
+        "/Fo:",
+        "${workspaceFolder}/Debug\\${fileBasenameNoExtension}.obj",
+        "${file}",
+        "/I${workspaceFolder}/../../install/nlohmann_json/include",
+        "/I${workspaceFolder}/../../install/xsimd/include",
+        "/I${workspaceFolder}/../../install/xtensor/include",
+        "/I${workspaceFolder}/../../install/xtensor-io/include",
+        "/I${workspaceFolder}/../../install/xtl/include"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$msCompile"],
+      "group": "build",
+      "detail": "compiler: cl.exe"
+    }
+  ]
+}

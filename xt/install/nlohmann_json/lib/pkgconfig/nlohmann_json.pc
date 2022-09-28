@@ -1,0 +1,4 @@
+Name: nlohmann_json
+Description: JSON for Modern C++
+Version: 3.9.1
+Cflags: -ID:/Utils/xtensor_cmake/install/nlohmann_json/include
