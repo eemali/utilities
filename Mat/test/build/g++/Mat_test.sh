@@ -1,0 +1,18 @@
+#!/bin/bash/
+CUR_DIR="$(pwd)"
+PATH2MAT="$CUR_DIR/../../.."
+PATH2SRC="$CUR_DIR/../../src"
+
+MAT_SRCS=""
+MAT_SRCS="$MAT_SRCS $PATH2MAT/src/Mat.cpp"
+
+ALL_SRCS=""
+ALL_SRCS="$ALL_SRCS $MAT_SRCS"
+
+INCLUDEPATH=""
+LIBPATH=""
+LIBS=""
+OUTPUTDIR="."
+MAIN_FILE="$PATH2SRC/Mat_test.cpp"
+
+g++ -std=c++0x -o $OUTPUTDIR/Mat_test $ALL_SRCS $MAIN_FILE $INCLUDEPATH $LIBS -Wl,-rpath=$LIBPATH
